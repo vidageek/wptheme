@@ -13,7 +13,7 @@
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 
 <!--link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /-->
-<link rel="stylesheet" href="file:///Users/setf/Documents/workspace/wptheme/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://localhost:8000/style.css" type="text/css" media="screen" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <style type="text/css" media="screen">
