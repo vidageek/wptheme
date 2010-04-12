@@ -24,7 +24,7 @@ Tags: blue, custom header, fixed width, two columns, widgets
 body {
 	font-size: 62.5%; /* Resets 1em to 10px */
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	background: #d5d6d7 url('images/kubrickbgcolor.jpg');
+	background: #d5d6d7;
 	color: #333;
 	text-align: center;
 	}
@@ -36,7 +36,7 @@ body {
 	}
 
 #header {
-	background: #73a0c5 url('images/kubrickheader.jpg') no-repeat bottom center;
+	background: #73a0c5 no-repeat bottom center;
 	}
 
 #headerimg 	{
@@ -81,7 +81,7 @@ border: 1px solid #ddd;
 }
 
 #footer {
-	background: #e7e7e7 url('images/kubrickfooter.jpg') no-repeat top;
+	background: #e7e7e7 no-repeat top;
 	border: none;
 	}
 
