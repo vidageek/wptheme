@@ -24,8 +24,8 @@ Tags: blue, custom header, fixed width, two columns, widgets
 body {
 	font-size: 62.5%; /* Resets 1em to 10px */
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	background: #d5d6d7;
-	color: #333;
+	background: #020176;
+	color: #666;
 	text-align: center;
 	}
 
@@ -36,7 +36,7 @@ body {
 	}
 
 #header {
-	background: #73a0c5 no-repeat bottom center;
+	background: no-repeat bottom center;
 	}
 
 #headerimg 	{
@@ -125,11 +125,11 @@ h3 {
 
 h1, h1 a, h1 a:hover, h1 a:visited, #headerimg .description {
 	text-decoration: none;
-	color: white;
+	color: #000;
 	}
 
 h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
-	color: #333;
+	color: #666;
 	}
 
 h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
@@ -245,16 +245,15 @@ body {
 	background-color: white;
 	margin: 20px auto;
 	padding: 0;
-	width: 760px;
+	width: 1000px;
 	border: 1px solid #959596;
 	}
 
 #header {
-	background-color: #73a0c5;
 	margin: 0 0 0 1px;
 	padding: 0;
 	height: 200px;
-	width: 758px;
+	width: 998px;
 	}
 
 #headerimg {
@@ -267,7 +266,7 @@ body {
 	float: left;
 	padding: 0 0 20px 45px;
 	margin: 0px 0 0;
-	width: 450px;
+	width: 690px;
 	}
 
 .widecolumn {
@@ -320,7 +319,7 @@ body {
 #footer {
 	padding: 0;
 	margin: 0 auto;
-	width: 760px;
+	width: 1000px;
 	clear: both;
 	}
 
@@ -578,9 +577,11 @@ select {
 /* Begin Sidebar */
 #sidebar
 {
-	padding: 20px 0 10px 0;
-	margin-left: 545px;
+	padding: 20px 0 10px 10px;
+	margin-left: 735px;
+	margin-top: 5px;
 	width: 190px;
+	border-left: solid 1px;
 	}
 
 #sidebar form {

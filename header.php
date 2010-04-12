@@ -39,8 +39,12 @@ if ( empty($withcomments) && !is_single() ) {
 
 <div id="header" role="banner">
 	<div id="headerimg">
+		<img src="">
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 		<div class="description"><?php bloginfo('description'); ?></div>
 	</div>
 </div>
+<?php
+echo wp_list_pages('sort_column=menu_order&title_li=&echo=0');
+?>
 <hr />
