@@ -1,0 +1,245 @@
+@font-face {
+	font-family: Bitwise;
+	src: url('bitwise/bitwise.ttf');
+}
+
+@font-face {
+	/* Regular */
+	font-family: "OFL Sorts Mill Goudy";
+	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStM.otf") format("opentype");
+	font-weight:  400;
+	font-style:   normal;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* Italic */
+	font-family: "OFL Sorts Mill Goudy";
+	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStM-Italic.otf") format("opentype");
+	font-weight:  400;
+	font-style:   italic;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* Italic */
+	font-family: "OFL Sorts Mill Goudy";
+	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStMTT-Italic.ttf") format("truetype");
+	font-weight:  400;
+	font-style:   italic;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* Regular */
+	font-family: "OFL Sorts Mill Goudy";
+	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStMTT.ttf") format("truetype");
+	font-weight:  400;
+	font-style:   normal;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* Normal */
+	font-family: "Puritan";
+	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2.otf") format("opentype");
+	font-weight:  400;
+	font-style:   normal;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* Bold */
+	font-family: "Puritan";
+	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2Bold.otf") format("opentype");
+	font-weight:  700;
+	font-style:   normal;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* BoldItalic */
+	font-family: "Puritan";
+	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2BoldItalic.otf") format("opentype");
+	font-weight:  700;
+	font-style:   italic;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	/* Italic */
+	font-family: "Puritan";
+	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2Italic.otf") format("opentype");
+	font-weight:  400;
+	font-style:   italic;
+	font-variant: normal;
+	font-stretch: normal;
+}
+
+body {
+	font-family: "Puritan", sans-serif;
+	font-size: 11pt;
+	width: 900px;
+	margin: auto;
+	background-color: #333;
+}
+
+body > header {
+	height: 249px;
+	width: 100%;
+	text-align: left;
+	color: #fff;
+}
+
+body > header #logo {
+	width: 160px;
+	height: 160px;
+	margin: 25px;
+}
+
+body > header hgroup {
+	display: inline-block;
+	width: 660px;
+	vertical-align: top;
+	margin-top: 25px;
+}
+
+body > header h1 {
+	font-family: Bitwise;
+	font-size: 80px;
+}
+
+body > header h6 {
+	font-style: italic;
+	font-weight: normal;
+	position: relative;
+	top: -1em;
+	color: #999;
+	font-size: 10pt;
+}
+
+#social-wrapper {
+	background-color: #ddd;
+}
+
+#social {
+	width: 225px;
+	text-align: center;
+	background-color: #333;
+	border-bottom-right-radius: 10px;
+}
+
+#social img {
+	width: 32px;
+	height: 32px;
+}
+
+nav {
+	width: 675px;
+	position: relative;
+	top: -130px;
+	left: 225px;
+	text-align: center;
+	padding: 30px 0 80px 0;
+	background-color: #ddd;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+nav ul li {
+	display: inline;
+	list-style: none;
+	font-variant: small-caps;
+	font-size: 20px;
+	margin-right: 15px;
+}
+
+nav a {
+	text-decoration: none;
+	padding: 5px;
+	color: #000;
+	border-radius: 3px;
+	border: 1px solid transparent;
+}
+
+nav a:hover {
+	border: 1px solid #39d;
+	background-color: #39d;
+}
+
+body > section {
+	margin-top: -131px;
+	background-color: #000;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+aside {
+	float: left;
+	width: 190px;
+	margin: 0;
+	display: inline-block;
+	padding: 10px;
+	color: #fff;
+	font-family: monospace;
+}
+
+aside a {
+	color: #fff;
+}
+
+aside form input[type="text"] {
+	width: 100%;
+}
+
+aside header {
+	font-size: 16pt;
+	margin: 1em 0 5px 0;
+}
+
+#main {
+	width: 640px;
+	padding: 10px 25px;
+	display: inline-block;
+	background-color: #ddd;
+	border-bottom-right-radius: 10px;
+}
+
+#main article {
+	margin-bottom: 2em;
+	text-align: justify;
+}
+
+#main article p {
+	margin-bottom: 1em;
+}
+
+#main article header h2 {
+	font-size: 16pt;
+}
+
+#main figure {
+	display: block;
+	text-align: center;
+	padding: 1.5em;
+}
+
+#main figure figcaption {
+	display: block;
+	font-style: italic;
+	margin: 1em;
+}
+
+footer {
+	color: #fff;
+	font-size: 80%;
+	padding: 1em;
+}
