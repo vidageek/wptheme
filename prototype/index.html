@@ -3,8 +3,19 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>VidaGeek.net</title>
-		<link rel="stylesheet" media="screen" type="text/css" href="reset.css"/>
-		<link rel="stylesheet" media="screen" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="reset-min.css">
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript">
+			(function () {
+				 var elements = [
+					 'article', 'footer', 'section', 'header', 'nav', 'aside', 'hgroup', 'figure'
+				 ];
+
+				 for (var i = 0, j = elements.length; i < j; i++) {
+					 document.createElement(elements[i]);
+				 }
+			 })();
+		</script>
 	</head>
 	<body>
 		<header>
@@ -13,23 +24,20 @@
 				<h1>VidaGeek.net</h1>
 				<h6>I'm a random quote</h6>
 			</hgroup>
-			<div id="social-wrapper">
-				<div id="social">
-					<a id="twitter" href="http://twitter.com/blogvidageek" title="Siga-nos no twitter" target="_blank"><img src="twitter.png" alt="Siga-nos no twitter"/></a>
-					<a id="rss" href="http://feeds.feedburner.com/VidaGeek" title="Assine nosso RSS" target="_blank"><img src="rss.png" alt="Assine nosso RSS"/></a>
-					<a id="email" href="http://feedburner.google.com/fb/a/mailverify?uri=VidaGeek" title="Receba por e-mail" target="_blank"><img src="email.png" alt="Receba por e-mail"/></a>
-				</div>
+			<div id="social">
+				<a id="twitter" href="http://twitter.com/blogvidageek" title="Siga-nos no twitter" target="_blank"><img src="twitter.png" alt="Siga-nos no twitter"/></a>
+				<a id="rss" href="http://feeds.feedburner.com/VidaGeek" title="Assine nosso RSS" target="_blank"><img src="rss.png" alt="Assine nosso RSS"/></a>
+				<a id="email" href="http://feedburner.google.com/fb/a/mailverify?uri=VidaGeek" title="Receba por e-mail" target="_blank"><img src="email.png" alt="Receba por e-mail"/></a>
 			</div>
+			<nav>
+				<ul>
+					<li><a href="#">Séries</a></li>
+					<li><a href="#">Autores</a></li>
+					<li><a href="#">Hospedagem</a></li>
+					<li><a href="#">Contato</a></li>
+				</ul>
+			</nav>
 		</header>
-		<nav>
-			<ul>
-				<li><a href="#">Séries</a></li>
-				<li><a href="#">Autores</a></li>
-				<li><a href="#">Não clique aqui</a></li>
-				<li><a href="#">Hospedagem</a></li>
-				<li><a href="#">Contato</a></li>
-			</ul>
-		</nav>
 		<section>
 			<aside>
 			<form action="http://www.google.com/cse" id="cse-search-box">
@@ -65,15 +73,15 @@
 				<section>
 					<header>&gt; apropos vidageek</header>
 					<ul>
-						<li><a href="http://blog.adaptworks.com.br/" target="_blank" muse_scanned="true">AdaptWorks</a></li>
-						<li><a href="http://blog.caelum.com.br" target="_blank" muse_scanned="true">Caelum</a></li>
-						<li><a href="http://chronosbox.org/blog/" target="_blank" muse_scanned="true">Chronos Box</a></li>
-						<li><a href="http://dosesdiarias.seucaminho.com/" target="_blank" muse_scanned="true">Doses Diárias</a></li>
-						<li><a href="http://fabiokung.com/" target="_blank" muse_scanned="true">Fabio Kung</a></li>
-						<li><a href="http://fragmental.tw/" target="_blank" muse_scanned="true">Fragmental</a></li>
-						<li><a href="http://www.gentoobr.org/" target="_blank" muse_scanned="true">Gentoo Br</a></li>
-						<li><a href="http://guilhermesilveira.wordpress.com/" target="_blank" muse_scanned="true">Guilherme Silveira</a></li>
-						<li><a href="http://pacman.blog.br/" target="_blank" muse_scanned="true">O Peczenyj</a></li>
+						<li><a href="http://blog.adaptworks.com.br/" target="_blank">AdaptWorks</a></li>
+						<li><a href="http://blog.caelum.com.br" target="_blank">Caelum</a></li>
+						<li><a href="http://chronosbox.org/blog/" target="_blank">Chronos Box</a></li>
+						<li><a href="http://dosesdiarias.seucaminho.com/" target="_blank">Doses Diárias</a></li>
+						<li><a href="http://fabiokung.com/" target="_blank">Fabio Kung</a></li>
+						<li><a href="http://fragmental.tw/" target="_blank">Fragmental</a></li>
+						<li><a href="http://www.gentoobr.org/" target="_blank">Gentoo Br</a></li>
+						<li><a href="http://guilhermesilveira.wordpress.com/" target="_blank">Guilherme Silveira</a></li>
+						<li><a href="http://pacman.blog.br/" target="_blank">O Peczenyj</a></li>
 					</ul>
 				</section>
 			</aside>
@@ -82,7 +90,7 @@
 					<header>
 						<h2>Lorem ipsum dolor sit amet</h2>
 						<h5>Autor: Breno</h5>
-						<time>30/09/2010</time>
+						<time datetime="2010-09-30">30/09/2010</time>
 					</header>
 					<figure>
 						<img src="image.gif" alt="image"/>
@@ -105,7 +113,7 @@
 					<header>
 						<h2>Consectetur magna aliqua</h2>
 						<h5>Autor: Ceci</h5>
-						<time>20/05/2010</time>
+						<time datetime="2010-05-20">20/05/2010</time>
 					</header>
 					<figure>
 						<img src="image.gif" alt="image"/>
@@ -127,7 +135,7 @@
 			</section>
 		</section>
 		<footer>Copyright VidaGeek.net</footer>
+		<script type="text/javascript" src="jquery-1.4.2.js"></script>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=pt"></script>
 	</body>
-	<script type="text/javascript" src="jquery-1.4.2.js"></script>
-	<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=pt"></script>
 </html>

@@ -1,10 +1,13 @@
+article, footer, section, header, nav, aside, hgroup, figure {
+	display: block;
+}
+
 @font-face {
 	font-family: Bitwise;
 	src: url('bitwise/bitwise.ttf');
 }
 
 @font-face {
-	/* Regular */
 	font-family: "OFL Sorts Mill Goudy";
 	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStM.otf") format("opentype");
 	font-weight:  400;
@@ -14,7 +17,6 @@
 }
 
 @font-face {
-	/* Italic */
 	font-family: "OFL Sorts Mill Goudy";
 	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStM-Italic.otf") format("opentype");
 	font-weight:  400;
@@ -24,7 +26,6 @@
 }
 
 @font-face {
-	/* Italic */
 	font-family: "OFL Sorts Mill Goudy";
 	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStMTT-Italic.ttf") format("truetype");
 	font-weight:  400;
@@ -34,7 +35,6 @@
 }
 
 @font-face {
-	/* Regular */
 	font-family: "OFL Sorts Mill Goudy";
 	src: url("http://openfontlibrary.org/content/chemoelectric/154/OFLGoudyStMTT.ttf") format("truetype");
 	font-weight:  400;
@@ -44,7 +44,6 @@
 }
 
 @font-face {
-	/* Normal */
 	font-family: "Puritan";
 	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2.otf") format("opentype");
 	font-weight:  400;
@@ -54,7 +53,6 @@
 }
 
 @font-face {
-	/* Bold */
 	font-family: "Puritan";
 	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2Bold.otf") format("opentype");
 	font-weight:  700;
@@ -64,7 +62,6 @@
 }
 
 @font-face {
-	/* BoldItalic */
 	font-family: "Puritan";
 	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2BoldItalic.otf") format("opentype");
 	font-weight:  700;
@@ -74,7 +71,6 @@
 }
 
 @font-face {
-	/* Italic */
 	font-family: "Puritan";
 	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2Italic.otf") format("opentype");
 	font-weight:  400;
@@ -83,30 +79,34 @@
 	font-stretch: normal;
 }
 
-body {
+html {
 	font-family: "Puritan", sans-serif;
 	font-size: 11pt;
-	width: 900px;
 	margin: auto;
-	background-color: #333;
+	background-color: #035c84;
+	margin: auto;
+	width: 960px;
 }
 
 body > header {
-	height: 249px;
+	height: 210px;
 	width: 100%;
 	text-align: left;
 	color: #fff;
+	background-color: #372f2c;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 body > header #logo {
 	width: 160px;
 	height: 160px;
-	margin: 25px;
+	margin: 25px 33px;
 }
 
 body > header hgroup {
 	display: inline-block;
-	width: 660px;
+	width: 560px;
 	vertical-align: top;
 	margin-top: 25px;
 }
@@ -125,15 +125,11 @@ body > header h6 {
 	font-size: 10pt;
 }
 
-#social-wrapper {
-	background-color: #ddd;
-}
-
 #social {
-	width: 225px;
-	text-align: center;
-	background-color: #333;
-	border-bottom-right-radius: 10px;
+	width: 80px;
+	height: 80px;
+	float: right;
+	padding: 25px;
 }
 
 #social img {
@@ -141,16 +137,20 @@ body > header h6 {
 	height: 32px;
 }
 
-nav {
-	width: 675px;
+#social #rss {
 	position: relative;
-	top: -130px;
+	top: 16px;
+}
+
+nav {
+	width: 735px;
+	position: relative;
+	top: -83px;
 	left: 225px;
 	text-align: center;
-	padding: 30px 0 80px 0;
-	background-color: #ddd;
+	padding: 30px 0;
+	background-color: #f3f5ff;
 	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
 }
 
 nav ul li {
@@ -164,27 +164,26 @@ nav ul li {
 nav a {
 	text-decoration: none;
 	padding: 5px;
-	color: #000;
+	color: #000a0f;
 	border-radius: 3px;
-	border: 1px solid transparent;
 }
 
 nav a:hover {
-	border: 1px solid #39d;
-	background-color: #39d;
+	background-color: #9fcad1;
 }
 
 body > section {
-	margin-top: -131px;
+	margin-top: -91px;
 	background-color: #000;
-	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	width: 960px;
+	margin: 0 auto;
 }
 
 aside {
 	float: left;
-	width: 190px;
+	width: 205px;
 	margin: 0;
 	display: inline-block;
 	padding: 10px;
@@ -206,10 +205,11 @@ aside header {
 }
 
 #main {
-	width: 640px;
+	width: 685px;
 	padding: 10px 25px;
 	display: inline-block;
-	background-color: #ddd;
+	background-color: #f3f5ff;
+	color: #000a0f;
 	border-bottom-right-radius: 10px;
 }
 
