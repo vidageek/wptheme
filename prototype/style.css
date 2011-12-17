@@ -43,44 +43,8 @@ article, footer, section, header, nav, aside, hgroup, figure {
 	font-stretch: normal;
 }
 
-@font-face {
-	font-family: "Puritan";
-	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2.otf") format("opentype");
-	font-weight:  400;
-	font-style:   normal;
-	font-variant: normal;
-	font-stretch: normal;
-}
-
-@font-face {
-	font-family: "Puritan";
-	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2Bold.otf") format("opentype");
-	font-weight:  700;
-	font-style:   normal;
-	font-variant: normal;
-	font-stretch: normal;
-}
-
-@font-face {
-	font-family: "Puritan";
-	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2BoldItalic.otf") format("opentype");
-	font-weight:  700;
-	font-style:   italic;
-	font-variant: normal;
-	font-stretch: normal;
-}
-
-@font-face {
-	font-family: "Puritan";
-	src: url("http://openfontlibrary.org/content/benweiner/259/Puritan2Italic.otf") format("opentype");
-	font-weight:  400;
-	font-style:   italic;
-	font-variant: normal;
-	font-stretch: normal;
-}
-
 html {
-	font-family: "Puritan", sans-serif;
+	font-family: sans-serif;
 	font-size: 11pt;
 	margin: auto;
 	background-color: #025d8c;
@@ -150,6 +114,8 @@ header form {
 
 header form input[type="submit"] {
 	width: 34px;
+	height: 34px;
+	padding: 0;
 	border: 1px solid #999;
 	background-color: #ddd;
 	color: #333;
