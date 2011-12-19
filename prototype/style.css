@@ -2,6 +2,19 @@ article, footer, section, header, nav, aside, hgroup, figure {
 	display: block;
 }
 
+header {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 @font-face {
 	font-family: Bitwise;
 	src: url('bitwise/bitwise.ttf');
@@ -54,27 +67,36 @@ html {
 	color: #474747;
 }
 
+article > img {
+	margin: 5px 15px 0px 0px;
+	float: left;
+}
+
+table {
+	text-align: center;
+}
+
 body > header {
-	height: 250px;
+	height: 210px;
 	width: 100%;
 	text-align: left;
 	color: #fff;
-	background-color: #474747;
+	background-color: #222;
 	/*border-top-left-radius: 10px;*/
 	/*border-top-right-radius: 10px;*/
 }
 
 body > header #logo {
-	width: 160px;
-	height: 160px;
-	margin: 20px 75px;
+	width: 150px;
+	height: 150px;
+	margin: 5px 80px;
 }
 
 body > header hgroup {
 	display: inline-block;
 	width: 510px;
 	vertical-align: top;
-	margin-top: 60px;
+	margin-top: 50px;
 }
 
 body > header h1 {
@@ -133,7 +155,7 @@ nav {
 	left: 310px;
 	text-align: center;
 	padding: 20px 0;
-	background-color: #f3f5ff;
+	background-color: #eeeeff;
 	border-top-left-radius: 10px;
 }
 
@@ -188,7 +210,7 @@ aside header .terminal-user {
 	width: 600px;
 	padding: 10px 25px;
 	display: inline-block;
-	background-color: #f3f5ff;
+	background-color: #eeeeff;
 	color: #474747a0f;
 	/*border-bottom-right-radius: 10px;*/
 	/*position: relative;*/
@@ -218,9 +240,8 @@ aside header .terminal-user {
 }
 
 #main figure {
-	display: block;
+	clear: both;
 	text-align: center;
-	padding: 1.5em;
 }
 
 #main figure figcaption {

@@ -50,16 +50,16 @@
 			<aside>
 				<section>
 					<header><span class="terminal-user">user@vidageek</span>$ fortune</header>
-					<a href="#">O Final de Caverna do Dragão</a>
+					"All people have the right to stupidity but some abuse the privilege."
 				</section>
 				<section>
 					<header><span class="terminal-user">user@vidageek</span>$ favorites</header>
 					<ul>
-						<li><a href="#">O Final de Caverna do Dragão</a> (<a href="#">Breno</a>)</li>
-						<li><a href="#">O Final de Caverna do Dragão</a> (<a href="#">Ceci</a>)</li>
-						<li><a href="#">O Final de Caverna do Dragão</a> (<a href="#">Fabs</a>)</li>
-						<li><a href="#">O Final de Caverna do Dragão</a> (<a href="#">Jonas</a>)</li>
-						<li><a href="#">O Final de Caverna do Dragão</a> (<a href="#">Luiz</a>)</li>
+						<li><a href="#">O Final de Caverna do Dragão</a></li>
+						<li><a href="#">Como migrar de SVN para GIT</a></li>
+						<li><a href="#">Gradle Tricks – Install, Daemon e Dependencies</a></li>
+						<li><a href="#">Lean Startup – Usando métricas para tomar decisões (Ski kitty)</a></li>
+						<li><a href="#">Curso de Lean Startup</a></li>
 					</ul>
 				</section>
 				<section>
@@ -88,49 +88,119 @@
 			<section id="main">
 				<article>
 					<header>
-						<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-						<h5>Autor: <a href="#">Breno</a></h5>
-						<time datetime="2010-09-30">30/09/2010</time>
+						<h2><a href="#">Como migrar de SVN pra Git</a></h2>
+						<h5>Autor: <a href="#">Jonas</a></h5>
+						<time datetime="2009-06-08">08/06/2009</time>
 					</header>
-					<figure>
-						<img src="image.gif" alt="image"/>
-						<figcaption>Some image</figcaption>
-					</figure>
-					<p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum</p>
-					<p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum</p>
-					<p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum</p>
+					 <p>Sei que tem um monte de tutoriais por aí de como migrar de svn para git, mas não achei nenhum com tudo 
+					que eu precisasse e em português. Então aqui vai o meu :)</p>
+					<p>WARNING!!!! Se você tem um repositório svn público e vai migrar para o 
+					<a target="_blank" href="http://github.com">github</a>, use o script de migração que ele te oferece quando 
+					você cria um repositório lá.</p>
+					<ol>
+						<li>
+							<p>Primeiro você deve instalar o git-svn. Não sei como instalar via apt, mas com o macports é um 
+							simples <strong>sudo port install git-core +svn</strong> (talvez você precise desinstalar o git-core 
+							antes de conseguir instalar. Se for o caso, sudo port uninstall git-core)</p>
+						</li>
+						<li>
+							<p>Crie um arquivo mapeando os <a target="_blank" href="http://vidageek.net/2009/06/15/">usuários 
+							do svn</a> para os do git. Algo como:</p>
+							<pre>
+								jonas = Jonas Abreu &lt;jonas@vidagek.net&gt;
+								usuario_svn = Nome Usuario &lt;email@usuario.net&gt;
+							</pre>
+					
+							<p>Dê o nome que quiser para o arquivo.</p>
+						</li>
+						<li>
+							<p>Faça checkout com o git svn:</p>
+							<pre>
+								mkdir repo_temp
+								cd repo_temp
+								git svn init URL_DO_SEU_REPOSITORIO_SVN --no-metadata
+								git config svn.authorsfile ARQUIVO_DE_MAPEAMENTO
+								git svn fetch
+							</pre>
+							<p>É bem importante não esquecer do &ndash;no-metadata. Isso vai evitar que ele traga um monte de lixo 
+							(.svn, se não me engano) para sua máquina.</p>
+						</li>
+						<li>
+							<p>Limpe a sujeira que o git svn colocou no seu repositório git local clonando ele.</p>
+							<pre>
+								cd ..
+								git clone repo_temp repo_final
+							</pre>
+						</li>
+						<li>
+							<p>Altere a url da origem do seu repositório local:</p>
+							<pre>
+								cd repo_final
+								<seu_editor_favorito> .git/config
+								</seu_editor_favorito>
+							</pre>
+							<p>Troque a url:</p>
+							<pre>
+								[remote "origin"]
+								url = repo_temp
+							</pre>
+							<p>pela url do seu repositório git:</p>
+							<pre>
+								[remote "origin"]
+								url = URL_DO_SEU_REPOSITORIO
+							</pre>
+						</li>
+						<li>
+							Envie os dados para o seu servidor remoto:<p></p>
+							<pre>
+								git push origin master
+							</pre>
+						</li>
+					</ol>
+				<p>Pronto. Seu repositório acabou de ser migrado de svn para git. Simples, fácil e rápido (a não ser que você 
+				tenha uns 10k commits. Aí vai demorar bastante. No meu caso demorou cerca de 4 horas o processo completo.)</p>
 				</article>
 				<article>
 					<header>
-						<h2>Consectetur magna aliqua</h2>
-						<h5>Autor: Ceci</h5>
+						<h2>Lean Startup – Usando métricas para tomar decisões (Ski kitty)</h2>
+						<h5>Autor: Fabs</h5>
 						<time datetime="2010-05-20">20/05/2010</time>
 					</header>
+						<img height="230" width="153" alt="20111206-012036.jpg" 
+						src="http://vidageek.net/wp-content/uploads/2011/12/20111206-012036.jpg" />
+					<p>Logo que decidimos fazer o<a href="https://market.android.com/details?id=br.com.watermelongames.skikitty"> 
+					Ski Kitty </a>para plataformas móveis, um dos primeiros desafios foi decidir, entre inúmeros modos de jogo, 
+					qual seria o mais divertido de jogar. Pensamos em várias mecânicas para o jogo. Três delas pareciam bem 
+					interessantes. Por muito tempo discutimos baseado nossas opiniões, o que cada um dos membros da equipe achava 
+					que deveria ser a melhor opção.</p>
+
+					<p>Foi então que decidimos medir o resultado de cada um dos modos, através de métricas usando o 
+					<a href="http://www.flurry.com/">flurry</a>, de modo a descobrir como os nossos usuários reagiriam a esses 
+					modos.</p>
+
+					<p>Decidimos testar nossos dois modos favoritos. Eles foram publicados no jogo Avalanche (anterior ao Ski 
+					Kitty). Esses dois modos estão presentes gratuitamente no nosso jogo para Android, e estarão em breve no 
+					Iphone e Ipad também. No iOS um dos modos e pago. Vamos chama-los de modo A e modo B. Os gráficos abaixo 
+					mostram número de sessões (no eixo y) e numero de repetições em cada sessão (no eixo x).</p>
+
 					<figure>
-						<img src="image.gif" alt="image"/>
-						<figcaption>Some image</figcaption>
+						<a href="#"><img src="http://vidageek.net/wp-content/uploads/2011/12/Screen-Shot-2011-12-06-at-16.36.43--235x300.png" title="Screen Shot 2011-12-06 at 16.36.43" /></a>
+						<a href="#"><img src="http://vidageek.net/wp-content/uploads/2011/12/Screen-Shot-2011-12-06-at-16.36.50--237x300.png" title="Screen Shot 2011-12-06 at 16.36.50" /></a>
+					<figcaption>Modo A vs. Modo B</figcaption>
 					</figure>
-					<p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum</p>
-					<p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum</p>
-					<p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>No menu de seleção, o modo B tinha destaque com relacao ao modo A, entretanto, tivemos muitos mais sessões 
+					no modo A. Os graficos nao estao em escala, mas so no grupo de pessoas que jogaram 1 ou 2 vezes, são 240 
+					sessões no modo A e 180 no modo B, sendo que o modo A ainda dispunha de 120 usuario jogando entre 3 e 9 vezes 
+					e pelo menos 10 jogando entre 10 e 29 vezes. Testamos tudo isso no periodo de 1 mês, então sessões entre 
+					10-29 significam jogadores que jogaram frequentemente, tivemos 10 no modo A.</p>
+
+					<p>Assim, foi muito mais facil decidir qual o modo preferido dos jogadores, ainda que em uma amostra 
+					pequena.</p>
+
+					<p>Se você tem um dispositivo Android, recomendo testar o <a href="#">SkiKitty</a>, e observar os dois modos. 
+					Se seu dispositivo é um iPhone, a Apple ainda vai aprovar nosso pedido, fique ligado no blog que eu aviso 
+					quando o jogo sair.</p>
 				</article>
 			</section>
 		</section>
